@@ -29,6 +29,13 @@ public class PlayerGroundedState : PlayerBaseState
     public override void PhysicsUpdate()
     {
         base.PhysicsUpdate();
+
+        if (!stateMachine.Player.Controller.isGrounded // 바닥이 아닐 때
+        && stateMachine.Player.Controller.velocity.y < Physics.gravity.y * Time.fixedDeltaTime) // 빠른 속도로 떨어질 때
+        {
+            stateMachine.ChangeState(stateMachine.FallState); // 떨어지기O
+            return;
+        }
     }
 
     protected override void OnMovementCanceled(InputAction.CallbackContext context)
