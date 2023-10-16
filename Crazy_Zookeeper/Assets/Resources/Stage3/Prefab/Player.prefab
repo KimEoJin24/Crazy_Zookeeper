@@ -82,7 +82,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_Actions: {fileID: -944628639613478452, guid: 0570d4d90a0d19a41be58dc8d54b019b,
     type: 3}
-  m_NotificationBehavior: 0
+  m_NotificationBehavior: 2
   m_UIInputModule: {fileID: 0}
   m_DeviceLostEvent:
     m_PersistentCalls:
@@ -93,7 +93,71 @@ MonoBehaviour:
   m_ControlsChangedEvent:
     m_PersistentCalls:
       m_Calls: []
-  m_ActionEvents: []
+  m_ActionEvents:
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7579166106542517398}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnMoveInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: d572ad9c-f573-4142-99a6-d1628235ea6a
+    m_ActionName: Player/Move[/Keyboard/w,/Keyboard/s,/Keyboard/a,/Keyboard/d]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: afe75593-02ad-42d8-8e89-693ca4ffbb49
+    m_ActionName: Player/Attack[/Mouse/leftButton]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7579166106542517398}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnJumpInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: e232fb04-d914-498e-8d9d-d04a08ad593b
+    m_ActionName: Player/Jump[/Keyboard/space]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: dcf6787d-9d5b-4cb1-944d-fd4b6f1b006a
+    m_ActionName: Player/Drink[/Keyboard/e]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: c96ba2ff-88b0-435b-97c5-1ca2f5c7bd6f
+    m_ActionName: Player/Equip1[/Keyboard/1]
+  - m_PersistentCalls:
+      m_Calls: []
+    m_ActionId: 091777c0-84d0-4904-9013-086b37ee932f
+    m_ActionName: Player/Equip2[/Keyboard/2]
+  - m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7579166106542517398}
+        m_TargetAssemblyTypeName: PlayerController, Assembly-CSharp
+        m_MethodName: OnLookInput
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+    m_ActionId: 9a8038c2-63d0-4762-9bb2-f6ce859dee38
+    m_ActionName: Player/Look[/Mouse/delta]
   m_NeverAutoSwitchControlSchemes: 0
   m_DefaultControlScheme: 
   m_DefaultActionMap: Player
@@ -111,13 +175,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51bfa23e470260e4d8f9e35c424cf695, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 0
-  jumpForce: 0
+  moveSpeed: 5
+  jumpForce: 100
   groundLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  cameraContaniner: {fileID: 0}
-  minxLook: 0
+    m_Bits: 55
+  cameraContainer: {fileID: 1119307411663766175}
+  minXLook: -85
+  maxXLook: 85
+  lookSensitivity: 0.2
+  canLook: 1
 --- !u!54 &8457098155769284124
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -164,10 +231,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.73
-  m_Height: 2.36
+  m_Radius: 0.67
+  m_Height: 2.5
   m_Direction: 1
-  m_Center: {x: 0, y: 1.23, z: 0.12}
+  m_Center: {x: 0, y: 1.35, z: 0.12}
 --- !u!1 &7326961254794201684
 GameObject:
   m_ObjectHideFlags: 0
@@ -447,15 +514,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4933435032037938, guid: 84055a36695444f4aa5b452cd26ee840, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4933435032037938, guid: 84055a36695444f4aa5b452cd26ee840, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4933435032037938, guid: 84055a36695444f4aa5b452cd26ee840, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.45
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 4933435032037938, guid: 84055a36695444f4aa5b452cd26ee840, type: 3}
       propertyPath: m_LocalPosition.x
@@ -496,6 +563,11 @@ PrefabInstance:
     - target: {fileID: 4933435032037938, guid: 84055a36695444f4aa5b452cd26ee840, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 95823362301097096, guid: 84055a36695444f4aa5b452cd26ee840,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

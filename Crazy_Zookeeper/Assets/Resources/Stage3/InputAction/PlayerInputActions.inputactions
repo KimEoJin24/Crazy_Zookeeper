@@ -15,9 +15,18 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Attack",
+                    "name": "Look",
+                    "type": "Value",
+                    "id": "9a8038c2-63d0-4762-9bb2-f6ce859dee38",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Run",
                     "type": "Button",
-                    "id": "afe75593-02ad-42d8-8e89-693ca4ffbb49",
+                    "id": "5f27c272-b595-4c6a-992e-13f9b2c29860",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -27,6 +36,15 @@
                     "name": "Jump",
                     "type": "Button",
                     "id": "e232fb04-d914-498e-8d9d-d04a08ad593b",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack",
+                    "type": "Button",
+                    "id": "afe75593-02ad-42d8-8e89-693ca4ffbb49",
                     "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
@@ -58,15 +76,6 @@
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
-                },
-                {
-                    "name": "Look",
-                    "type": "Value",
-                    "id": "9a8038c2-63d0-4762-9bb2-f6ce859dee38",
-                    "expectedControlType": "Vector2",
-                    "processors": "",
-                    "interactions": "",
-                    "initialStateCheck": true
                 }
             ],
             "bindings": [
@@ -127,17 +136,6 @@
                 },
                 {
                     "name": "",
-                    "id": "ef433e2f-1e6a-4838-bfd7-2c7b9c104e92",
-                    "path": "<Mouse>/leftButton",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Attack",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
                     "id": "d89b93a4-aa5f-468c-84dd-c673aca033f3",
                     "path": "<Keyboard>/space",
                     "interactions": "",
@@ -188,6 +186,39 @@
                     "processors": "",
                     "groups": "",
                     "action": "Look",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "378d9b59-9e43-4b1a-92f2-c6bf3831ae76",
+                    "path": "<Keyboard>/leftShift",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "d93b8a7a-d1fb-4b64-8e4e-edb6c42e2aff",
+                    "path": "<Mouse>/rightButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Run",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "ef433e2f-1e6a-4838-bfd7-2c7b9c104e92",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
