@@ -43,6 +43,11 @@ public class PlayerGroundedState : PlayerBaseState
         base.OnMovementCanceled(context);
     }
 
+    protected override void OnJumpStarted(InputAction.CallbackContext obj) // 점프 키가 눌러졌을 때
+    {
+        stateMachine.ChangeState(stateMachine.JumpState); // 점프로 전환
+    }
+
     protected virtual void OnMove() // 이동이 이루어짐.
     {
         stateMachine.ChangeState(stateMachine.WalkState); // 걷기로 전환
