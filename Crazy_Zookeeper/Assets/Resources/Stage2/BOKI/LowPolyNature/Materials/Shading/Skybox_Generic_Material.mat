@@ -62,7 +62,7 @@ Material:
     - Vector2_52548a291abd4933a311a8da641032ef: {r: 0.4, g: 0.4, b: 0, a: 0}
     - Vector2_baf1ed8999a74de09d9cb432941b2006: {r: 0.01, g: 0.01, b: 0, a: 0}
   m_BuildTextureStacks: []
---- !u!114 &5727148442745329309
+--- !u!114 &7404601700711633194
 MonoBehaviour:
   m_ObjectHideFlags: 11
   m_CorrespondingSourceObject: {fileID: 0}
