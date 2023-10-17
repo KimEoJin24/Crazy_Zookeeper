@@ -28,7 +28,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             ""id"": ""29800ccd-9703-4c81-bf5f-cdb40698d517"",
             ""actions"": [
                 {
-                    ""name"": ""Movement"",
+                    ""name"": ""Move"",
                     ""type"": ""Value"",
                     ""id"": ""a7393f8d-25bf-4821-81a5-eb62537b9600"",
                     ""expectedControlType"": ""Vector2"",
@@ -71,6 +71,42 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Attack"",
+                    ""type"": ""Button"",
+                    ""id"": ""c1ca3032-6475-4d31-95a1-fc0b17f1716a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Drink"",
+                    ""type"": ""Button"",
+                    ""id"": ""446ca9f3-fa4f-483f-bc71-0acb8a055b84"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Equip1"",
+                    ""type"": ""Button"",
+                    ""id"": ""5b06dcd6-6ed5-400b-9613-aefa278227fc"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Equip2"",
+                    ""type"": ""Button"",
+                    ""id"": ""ce82b8d9-c7c1-4253-9953-b07c618c24b0"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -81,7 +117,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
@@ -92,7 +128,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -103,7 +139,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -114,7 +150,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -125,7 +161,7 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Movement"",
+                    ""action"": ""Move"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
                 },
@@ -183,6 +219,50 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
                     ""action"": ""InterAct"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""f82edf23-55b3-40f7-8ff8-d61ab324827e"",
+                    ""path"": ""<Mouse>/leftButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Attack"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5cd5d92-ac2a-4c35-b2e8-286c10251f4d"",
+                    ""path"": ""<Keyboard>/e"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Drink"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""4406f1e4-ec6d-42d9-8f76-6ea36cc4877f"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Equip1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""389a2497-d0d3-4a28-b32c-b88083a5ccb6"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Equip2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
                 }
             ]
         }
@@ -191,11 +271,15 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
 }");
         // Player
         m_Player = asset.FindActionMap("Player", throwIfNotFound: true);
-        m_Player_Movement = m_Player.FindAction("Movement", throwIfNotFound: true);
+        m_Player_Move = m_Player.FindAction("Move", throwIfNotFound: true);
         m_Player_Look = m_Player.FindAction("Look", throwIfNotFound: true);
         m_Player_Run = m_Player.FindAction("Run", throwIfNotFound: true);
         m_Player_Jump = m_Player.FindAction("Jump", throwIfNotFound: true);
         m_Player_InterAct = m_Player.FindAction("InterAct", throwIfNotFound: true);
+        m_Player_Attack = m_Player.FindAction("Attack", throwIfNotFound: true);
+        m_Player_Drink = m_Player.FindAction("Drink", throwIfNotFound: true);
+        m_Player_Equip1 = m_Player.FindAction("Equip1", throwIfNotFound: true);
+        m_Player_Equip2 = m_Player.FindAction("Equip2", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -257,20 +341,28 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     // Player
     private readonly InputActionMap m_Player;
     private List<IPlayerActions> m_PlayerActionsCallbackInterfaces = new List<IPlayerActions>();
-    private readonly InputAction m_Player_Movement;
+    private readonly InputAction m_Player_Move;
     private readonly InputAction m_Player_Look;
     private readonly InputAction m_Player_Run;
     private readonly InputAction m_Player_Jump;
     private readonly InputAction m_Player_InterAct;
+    private readonly InputAction m_Player_Attack;
+    private readonly InputAction m_Player_Drink;
+    private readonly InputAction m_Player_Equip1;
+    private readonly InputAction m_Player_Equip2;
     public struct PlayerActions
     {
         private @PlayerInputActions m_Wrapper;
         public PlayerActions(@PlayerInputActions wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Movement => m_Wrapper.m_Player_Movement;
+        public InputAction @Move => m_Wrapper.m_Player_Move;
         public InputAction @Look => m_Wrapper.m_Player_Look;
         public InputAction @Run => m_Wrapper.m_Player_Run;
         public InputAction @Jump => m_Wrapper.m_Player_Jump;
         public InputAction @InterAct => m_Wrapper.m_Player_InterAct;
+        public InputAction @Attack => m_Wrapper.m_Player_Attack;
+        public InputAction @Drink => m_Wrapper.m_Player_Drink;
+        public InputAction @Equip1 => m_Wrapper.m_Player_Equip1;
+        public InputAction @Equip2 => m_Wrapper.m_Player_Equip2;
         public InputActionMap Get() { return m_Wrapper.m_Player; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -280,9 +372,9 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_PlayerActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_PlayerActionsCallbackInterfaces.Add(instance);
-            @Movement.started += instance.OnMovement;
-            @Movement.performed += instance.OnMovement;
-            @Movement.canceled += instance.OnMovement;
+            @Move.started += instance.OnMove;
+            @Move.performed += instance.OnMove;
+            @Move.canceled += instance.OnMove;
             @Look.started += instance.OnLook;
             @Look.performed += instance.OnLook;
             @Look.canceled += instance.OnLook;
@@ -295,13 +387,25 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @InterAct.started += instance.OnInterAct;
             @InterAct.performed += instance.OnInterAct;
             @InterAct.canceled += instance.OnInterAct;
+            @Attack.started += instance.OnAttack;
+            @Attack.performed += instance.OnAttack;
+            @Attack.canceled += instance.OnAttack;
+            @Drink.started += instance.OnDrink;
+            @Drink.performed += instance.OnDrink;
+            @Drink.canceled += instance.OnDrink;
+            @Equip1.started += instance.OnEquip1;
+            @Equip1.performed += instance.OnEquip1;
+            @Equip1.canceled += instance.OnEquip1;
+            @Equip2.started += instance.OnEquip2;
+            @Equip2.performed += instance.OnEquip2;
+            @Equip2.canceled += instance.OnEquip2;
         }
 
         private void UnregisterCallbacks(IPlayerActions instance)
         {
-            @Movement.started -= instance.OnMovement;
-            @Movement.performed -= instance.OnMovement;
-            @Movement.canceled -= instance.OnMovement;
+            @Move.started -= instance.OnMove;
+            @Move.performed -= instance.OnMove;
+            @Move.canceled -= instance.OnMove;
             @Look.started -= instance.OnLook;
             @Look.performed -= instance.OnLook;
             @Look.canceled -= instance.OnLook;
@@ -314,6 +418,18 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
             @InterAct.started -= instance.OnInterAct;
             @InterAct.performed -= instance.OnInterAct;
             @InterAct.canceled -= instance.OnInterAct;
+            @Attack.started -= instance.OnAttack;
+            @Attack.performed -= instance.OnAttack;
+            @Attack.canceled -= instance.OnAttack;
+            @Drink.started -= instance.OnDrink;
+            @Drink.performed -= instance.OnDrink;
+            @Drink.canceled -= instance.OnDrink;
+            @Equip1.started -= instance.OnEquip1;
+            @Equip1.performed -= instance.OnEquip1;
+            @Equip1.canceled -= instance.OnEquip1;
+            @Equip2.started -= instance.OnEquip2;
+            @Equip2.performed -= instance.OnEquip2;
+            @Equip2.canceled -= instance.OnEquip2;
         }
 
         public void RemoveCallbacks(IPlayerActions instance)
@@ -333,10 +449,14 @@ public partial class @PlayerInputActions: IInputActionCollection2, IDisposable
     public PlayerActions @Player => new PlayerActions(this);
     public interface IPlayerActions
     {
-        void OnMovement(InputAction.CallbackContext context);
+        void OnMove(InputAction.CallbackContext context);
         void OnLook(InputAction.CallbackContext context);
         void OnRun(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnInterAct(InputAction.CallbackContext context);
+        void OnAttack(InputAction.CallbackContext context);
+        void OnDrink(InputAction.CallbackContext context);
+        void OnEquip1(InputAction.CallbackContext context);
+        void OnEquip2(InputAction.CallbackContext context);
     }
 }
