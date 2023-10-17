@@ -29,6 +29,9 @@ public class PlayerBaseState : IState
         input.PlayerActions.Run.started += OnRunStarted;
 
         stateMachine.Player.Input.PlayerActions.Jump.started += OnJumpStarted;
+
+        stateMachine.Player.Input.PlayerActions.Attack.performed += OnAttackPerformed;
+        stateMachine.Player.Input.PlayerActions.Attack.canceled += OnAttackCanceled;
     }
 
     public virtual void Exit()
@@ -43,6 +46,9 @@ public class PlayerBaseState : IState
         input.PlayerActions.Run.started -= OnRunStarted;
 
         stateMachine.Player.Input.PlayerActions.Jump.started -= OnJumpStarted;
+
+        stateMachine.Player.Input.PlayerActions.Attack.performed -= OnAttackPerformed;
+        stateMachine.Player.Input.PlayerActions.Attack.canceled -= OnAttackCanceled;
     }
 
     protected virtual void OnRunStarted(InputAction.CallbackContext obj)
@@ -57,6 +63,21 @@ public class PlayerBaseState : IState
     protected virtual void OnJumpStarted(InputAction.CallbackContext obj)
     {
 
+    }
+    protected void ForceMove()
+    {
+        stateMachine.Player.Controller.Move(stateMachine.Player.ForceReceiver.Movement * Time.deltaTime);
+    }
+
+
+    protected virtual void OnAttackPerformed(InputAction.CallbackContext obj) // 눌러지는 동안
+    {
+        stateMachine.IsAttacking = true;
+    }
+
+    protected virtual void OnAttackCanceled(InputAction.CallbackContext obj) // 뺄 때는
+    {
+        stateMachine.IsAttacking = false;
     }
 
     public virtual void HandleInput()
@@ -138,6 +159,24 @@ public class PlayerBaseState : IState
     {
         stateMachine.Player.Animator.SetBool(animationHash, false);
     }
+    
+    protected float GetNormalizedTime(Animator animator, string tag)
+    {
+        AnimatorStateInfo currentInfo = animator.GetCurrentAnimatorStateInfo(0);
+        AnimatorStateInfo nextInfo = animator.GetNextAnimatorStateInfo(0);
 
+        if (animator.IsInTransition(0) && nextInfo.IsTag(tag)) // 라인O & 공격 태크O
+        {
+            return nextInfo.normalizedTime; // 다음 애니메이션 정보 전달
+        }
+        else if (!animator.IsInTransition(0) && currentInfo.IsTag(tag)) // 라인X & 공격 태그O
+        {
+            return currentInfo.normalizedTime; // 현재 애니메이션 
+        }
+        else 
+        {
+            return 0f;
+        }
+    }
 
 }
