@@ -64,9 +64,16 @@ public class StageClearManager : MonoBehaviour
         switch (clear)
         {
             case Clear.UnlockStage2:
+                // isClear = GameManager_Stage1.instance.clearStage1 == true;
                 break;
             case Clear.UnlockStage3:
+                // isClear = GameManager_Stage2.instance.clearStage2 == true;
                 break;
+        }
+
+        if( isClear && PlayerPrefs.GetInt(clear.ToString()) == 0) 
+        {
+            PlayerPrefs.SetInt(clear.ToString(), 1);
         }
     }
 }
