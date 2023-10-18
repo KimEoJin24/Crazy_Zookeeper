@@ -2,20 +2,20 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Zookeeper : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     [field: Header("References")]
     [field: SerializeField] public ZookeeperSO Data { get; private set; }
 
     [field: Header("Animations")]
-    [field: SerializeField] public ZookeeperAnimationData AnimationData { get; private set; }
+    [field: SerializeField] public EnemyAnimationData AnimationData { get; private set; }
 
     public Rigidbody Rigidbody { get; private set; }
     public Animator Animator { get; private set; }
     public ForceReceiver ForceReceiver { get; private set; }
     public CharacterController Controller { get; private set; }
 
-    private ZookeeperStateMachine stateMachine;
+    private EnemyStateMachine stateMachine;
 
     void Awake()
     {
@@ -26,7 +26,7 @@ public class Zookeeper : MonoBehaviour
         Controller = GetComponent<CharacterController>();
         ForceReceiver = GetComponent<ForceReceiver>();
 
-        stateMachine = new ZookeeperStateMachine(this);
+        stateMachine = new EnemyStateMachine(this);
     }
 
     private void Start()

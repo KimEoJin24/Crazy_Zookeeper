@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZookeeperBaseState : IState
+public class EnemyBaseState : IState
 {
-    protected ZookeeperStateMachine stateMachine;
+    protected EnemyStateMachine stateMachine;
 
     protected readonly PlayerGroundData groundData;
-    public ZookeeperBaseState(ZookeeperStateMachine zookeeperStateMachine)
+    public EnemyBaseState(EnemyStateMachine ememyStateMachine)
     {
-        stateMachine = zookeeperStateMachine;
-        groundData = stateMachine.Zookeeper.Data.GroundedData;
+        stateMachine = ememyStateMachine;
+        groundData = stateMachine.Enemy.Data.GroundedData;
     }
 
     public virtual void Enter()
@@ -40,12 +40,12 @@ public class ZookeeperBaseState : IState
 
     protected void StartAnimation(int animationHash)
     {
-        stateMachine.Zookeeper.Animator.SetBool(animationHash, true);
+        stateMachine.Enemy.Animator.SetBool(animationHash, true);
     }
 
     protected void StopAnimation(int animationHash)
     {
-        stateMachine.Zookeeper.Animator.SetBool(animationHash, false);
+        stateMachine.Enemy.Animator.SetBool(animationHash, false);
     }
 
     private void Move()
@@ -58,19 +58,19 @@ public class ZookeeperBaseState : IState
 
     protected void ForceMove()
     {
-        stateMachine.Zookeeper.Controller.Move(stateMachine.Zookeeper.ForceReceiver.Movement * Time.deltaTime);
+        stateMachine.Enemy.Controller.Move(stateMachine.Enemy.ForceReceiver.Movement * Time.deltaTime);
     }
 
     // 
     private Vector3 GetMovementDirection()
     {
-        return (stateMachine.Target.transform.position - stateMachine.Zookeeper.transform.position).normalized;
+        return (stateMachine.Target.transform.position - stateMachine.Enemy.transform.position).normalized;
     }
 
     private void Move(Vector3 direction)
     {
         float movementSpeed = GetMovementSpeed();
-        stateMachine.Zookeeper.Controller.Move(((direction * movementSpeed) + stateMachine.Zookeeper.ForceReceiver.Movement) * Time.deltaTime);
+        stateMachine.Enemy.Controller.Move(((direction * movementSpeed) + stateMachine.Enemy.ForceReceiver.Movement) * Time.deltaTime);
     }
 
     private void Rotate(Vector3 direction)
@@ -80,7 +80,7 @@ public class ZookeeperBaseState : IState
             direction.y = 0;
             Quaternion targetRotation = Quaternion.LookRotation(direction);
 
-            stateMachine.Zookeeper.transform.rotation = Quaternion.Slerp(stateMachine.Zookeeper.transform.rotation, targetRotation, stateMachine.RotationDamping * Time.deltaTime);
+            stateMachine.Enemy.transform.rotation = Quaternion.Slerp(stateMachine.Enemy.transform.rotation, targetRotation, stateMachine.RotationDamping * Time.deltaTime);
         }
     }
 
@@ -115,8 +115,8 @@ public class ZookeeperBaseState : IState
     {
         // if (stateMachine.Target.IsDead) { return false; }
 
-        float playerDistanceSqr = (stateMachine.Target.transform.position - stateMachine.Zookeeper.transform.position).sqrMagnitude;
+        float playerDistanceSqr = (stateMachine.Target.transform.position - stateMachine.Enemy.transform.position).sqrMagnitude;
 
-        return playerDistanceSqr <= stateMachine.Zookeeper.Data.PlayerChasingRange * stateMachine.Zookeeper.Data.PlayerChasingRange;
+        return playerDistanceSqr <= stateMachine.Enemy.Data.PlayerChasingRange * stateMachine.Enemy.Data.PlayerChasingRange;
     }
 }

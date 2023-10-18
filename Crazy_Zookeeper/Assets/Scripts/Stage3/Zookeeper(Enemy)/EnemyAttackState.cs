@@ -2,12 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ZookeeperAttackState : ZookeeperBaseState
+public class EnemyAttackState : EnemyBaseState
 {
 
     private bool alreadyAppliedForce;
 
-    public ZookeeperAttackState(ZookeeperStateMachine zookeeperStateMachine) : base(zookeeperStateMachine)
+    public EnemyAttackState(EnemyStateMachine ememyStateMachine) : base(ememyStateMachine)
     {
     }
 
@@ -15,15 +15,15 @@ public class ZookeeperAttackState : ZookeeperBaseState
     {
         stateMachine.MovementSpeedModifier = 0;
         base.Enter();
-        StartAnimation(stateMachine.Zookeeper.AnimationData.AttackParameterHash);
-        StartAnimation(stateMachine.Zookeeper.AnimationData.BaseAttackParameterHash);
+        StartAnimation(stateMachine.Enemy.AnimationData.AttackParameterHash);
+        StartAnimation(stateMachine.Enemy.AnimationData.BaseAttackParameterHash);
     }
 
     public override void Exit()
     {
         base.Exit();
-        StopAnimation(stateMachine.Zookeeper.AnimationData.AttackParameterHash);
-        StopAnimation(stateMachine.Zookeeper.AnimationData.BaseAttackParameterHash);
+        StopAnimation(stateMachine.Enemy.AnimationData.AttackParameterHash);
+        StopAnimation(stateMachine.Enemy.AnimationData.BaseAttackParameterHash);
 
     }
 
@@ -33,10 +33,10 @@ public class ZookeeperAttackState : ZookeeperBaseState
 
         ForceMove();
 
-        float normalizedTime = GetNormalizedTime(stateMachine.Zookeeper.Animator, "Attack");
+        float normalizedTime = GetNormalizedTime(stateMachine.Enemy.Animator, "Attack");
         if (normalizedTime < 1f)
         {
-            if (normalizedTime >= stateMachine.Zookeeper.Data.ForceTransitionTime)
+            if (normalizedTime >= stateMachine.Enemy.Data.ForceTransitionTime)
                 TryApplyForce();
 
         }
@@ -61,9 +61,9 @@ public class ZookeeperAttackState : ZookeeperBaseState
         if (alreadyAppliedForce) return;
         alreadyAppliedForce = true;
 
-        stateMachine.Zookeeper.ForceReceiver.Reset();
+        stateMachine.Enemy.ForceReceiver.Reset();
 
-        stateMachine.Zookeeper.ForceReceiver.AddForce(stateMachine.Zookeeper.transform.forward * stateMachine.Zookeeper.Data.Force);
+        stateMachine.Enemy.ForceReceiver.AddForce(stateMachine.Enemy.transform.forward * stateMachine.Enemy.Data.Force);
 
     }
 }
