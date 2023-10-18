@@ -5,10 +5,13 @@ using UnityEngine;
 public class IdleState : StateMachineBehaviour
 {
     float timer;
-
+    Transform player;
+    float chaseRange = 14;
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        timer = 0;   
+        timer = 0;
+
+        player = GameObject.FindGameObjectWithTag("Player").transform;
     }
 
 
@@ -18,6 +21,11 @@ public class IdleState : StateMachineBehaviour
         if(timer > 3)
         {
             animator.SetBool("isPatrolling", true);
+            float distance = Vector3.Distance(player.position, animator.transform.position);
+            if(distance < chaseRange)
+            {
+                animator.SetBool("isChasing", true);
+            }
         }
     }
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
