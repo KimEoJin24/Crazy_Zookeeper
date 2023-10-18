@@ -22,7 +22,6 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
         health.uiBar.fillAmount = health.GetPercentage();
     }
 
-    // TODO: 사육사 스킬 중 체력 회복 스킬 없을 경우 삭제 예정
     public void Heal(float amount)
     {
         health.Add(amount);
@@ -33,10 +32,8 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
         Debug.Log("사육사가 쓰러졌다.");
     }
 
-    // TODO: 사육사 공격 종류에 따른 데미지 값 감소 구현
     public void TakePhysicalDamage(int damageAmount)
     {
-        health.Subtract(damageAmount);
-        onTakeDamage?.Invoke();
+        throw new System.NotImplementedException();
     }
 }
