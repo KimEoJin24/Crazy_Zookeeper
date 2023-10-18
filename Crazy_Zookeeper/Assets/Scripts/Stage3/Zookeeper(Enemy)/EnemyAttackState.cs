@@ -13,10 +13,12 @@ public class EnemyAttackState : EnemyBaseState
 
     public override void Enter()
     {
-        stateMachine.MovementSpeedModifier = 0;
         base.Enter();
         StartAnimation(stateMachine.Enemy.AnimationData.AttackParameterHash);
         StartAnimation(stateMachine.Enemy.AnimationData.BaseAttackParameterHash);
+
+        stateMachine.MovementSpeedModifier = 0;
+
     }
 
     public override void Exit()

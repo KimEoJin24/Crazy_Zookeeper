@@ -10,11 +10,13 @@ public class Enemy : MonoBehaviour
     [field: Header("Animations")]
     [field: SerializeField] public EnemyAnimationData AnimationData { get; private set; }
 
+
     public Rigidbody Rigidbody { get; private set; }
     public Animator Animator { get; private set; }
     public ForceReceiver ForceReceiver { get; private set; }
     public CharacterController Controller { get; private set; }
 
+    
     private EnemyStateMachine stateMachine;
 
     void Awake()
@@ -25,6 +27,7 @@ public class Enemy : MonoBehaviour
         Animator = GetComponentInChildren<Animator>();
         Controller = GetComponent<CharacterController>();
         ForceReceiver = GetComponent<ForceReceiver>();
+
 
         stateMachine = new EnemyStateMachine(this);
     }
@@ -45,4 +48,6 @@ public class Enemy : MonoBehaviour
     {
         stateMachine.PhysicsUpdate();
     }
+   
+
 }
