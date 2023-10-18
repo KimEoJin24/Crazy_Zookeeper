@@ -376,6 +376,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Popup_potion: {fileID: 159181126}
   Popup_weapon: {fileID: 1633442594}
+<<<<<<< HEAD
 
 --- !u!1 &214234106 stripped
 GameObject:
@@ -405,7 +406,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300162, guid: b336c09f45dc3df458ddd8065bbe4b25, type: 3}
->>>>>>> parent of b0f3ffb (Merge pull request #24 from KimEoJin24/EHL_Scene2UI)
+
 --- !u!1 &262788881
 GameObject:
   m_ObjectHideFlags: 0
@@ -1774,6 +1775,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 666302887}
   m_PrefabAsset: {fileID: 0}
+
 --- !u!1 &723574966 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1895323319924060, guid: 99a8c38a09f90224f8ccea4c2b9ead27,
@@ -2061,6 +2063,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300076, guid: b336c09f45dc3df458ddd8065bbe4b25, type: 3}
+
 --- !u!1 &832575517
 GameObject:
   m_ObjectHideFlags: 0
@@ -2389,26 +2392,24 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1403844822}
     m_Modifications:
-<<<<<<< HEAD
 
-=======
->>>>>>> parent of b0f3ffb (Merge pull request #24 from KimEoJin24/EHL_Scene2UI)
     - target: {fileID: 2538208172927381571, guid: 5a9667695bf000243b1cc3a22006ecaa,
         type: 3}
       propertyPath: m_Name
       value: Waste_Close
       objectReference: {fileID: 0}
-<<<<<<< HEAD
+
     - target: {fileID: 2914486802874379001, guid: 5a9667695bf000243b1cc3a22006ecaa,
->>>>>>> parent of b741fa5 (Merge pull request #23 from KimEoJin24/PMH_Stage2_Player2)
-=======
+
     - target: {fileID: 2538208172927381571, guid: 5a9667695bf000243b1cc3a22006ecaa,
         type: 3}
       propertyPath: m_Layer
       value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 2914486802874379001, guid: 5a9667695bf000243b1cc3a22006ecaa,
->>>>>>> parent of b0f3ffb (Merge pull request #24 from KimEoJin24/EHL_Scene2UI)
+
+    - target: {fileID: 2914486802874379001, guid: 5a9667695bf000243b1cc3a22006ecaa,
+
         type: 3}
       propertyPath: m_RootOrder
       value: -1
@@ -2477,13 +2478,13 @@ PrefabInstance:
       value: 8
       objectReference: {fileID: 0}
 =======
->>>>>>> parent of b741fa5 (Merge pull request #23 from KimEoJin24/PMH_Stage2_Player2)
+
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-<<<<<<< HEAD
+
     m_AddedComponents: []
-<<<<<<< HEAD
+
   m_SourcePrefab: {fileID: 100100000, guid: c61f62438f1fcef498c8b2411e2b67bb, type: 3}
 
 =======
@@ -2493,7 +2494,9 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 583290619}
   m_SourcePrefab: {fileID: 100100000, guid: 5a9667695bf000243b1cc3a22006ecaa, type: 3}
->>>>>>> parent of b0f3ffb (Merge pull request #24 from KimEoJin24/EHL_Scene2UI)
+
+  m_SourcePrefab: {fileID: 100100000, guid: 5a9667695bf000243b1cc3a22006ecaa, type: 3}
+
 --- !u!4 &896304272 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2914486802874379001, guid: 5a9667695bf000243b1cc3a22006ecaa,
@@ -2673,8 +2676,7 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1022769388}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 --- !u!1 &1146822632
 =======
 --- !u!1 &1165080485 stripped
@@ -2746,7 +2748,7 @@ MeshCollider:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-<<<<<<< HEAD
+
   m_GameObject: {fileID: 1146822632}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 221.7609, y: 0, z: 124.65159}
@@ -2756,8 +2758,8 @@ MeshCollider:
   m_Father: {fileID: 0}
   m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-=======
->>>>>>> parent of b741fa5 (Merge pull request #23 from KimEoJin24/PMH_Stage2_Player2)
+
+
 =======
   m_GameObject: {fileID: 1241299975}
   m_Material: {fileID: 0}
@@ -2803,7 +2805,7 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300070, guid: b336c09f45dc3df458ddd8065bbe4b25, type: 3}
->>>>>>> parent of b0f3ffb (Merge pull request #24 from KimEoJin24/EHL_Scene2UI)
+
 --- !u!1001 &1262640552
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3501,9 +3503,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
 
-=======
 --- !u!1 &1613034119 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1519117862540078, guid: 99a8c38a09f90224f8ccea4c2b9ead27,
@@ -3584,7 +3584,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Popup_potion: {fileID: 0}
   Popup_weapon: {fileID: 0}
-<<<<<<< HEAD
+
 
 =======
 --- !u!1 &1649578595 stripped
@@ -3671,7 +3671,8 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300068, guid: b336c09f45dc3df458ddd8065bbe4b25, type: 3}
->>>>>>> parent of b0f3ffb (Merge pull request #24 from KimEoJin24/EHL_Scene2UI)
+
+
 --- !u!1001 &1751272175
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4257,8 +4258,7 @@ Transform:
   m_Father: {fileID: 1575301000}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-<<<<<<< HEAD
-<<<<<<< HEAD
+
 --- !u!1001 &778102707546283826
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4553,4 +4553,3 @@ MeshCollider:
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 4300218, guid: b336c09f45dc3df458ddd8065bbe4b25, type: 3}
->>>>>>> parent of b0f3ffb (Merge pull request #24 from KimEoJin24/EHL_Scene2UI)
