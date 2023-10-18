@@ -1,4 +1,4 @@
-<<<<<<< HEAD:Crazy_Zookeeper/Assets/PanelHandler.cs
+
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
