@@ -11,7 +11,7 @@ public class ChaseState : StateMachineBehaviour
     {
         agent = animator.GetComponent<NavMeshAgent>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        agent.speed = 3.5f;
+        //agent.speed = 3.5f;
     }
 
     
@@ -20,11 +20,11 @@ public class ChaseState : StateMachineBehaviour
         agent.SetDestination(player.position);
 
         float distance = Vector3.Distance(player.position, animator.transform.position);
-        if (distance < 15)
+        if (distance < 7) // 쫓아오는 범위
         {
             animator.SetBool("isChasing", false);
         }
-        if(distance < 2.5f) // 적당한 거리서 공격
+        if(distance < 4.5f) // 적당한 거리서 공격
         {
             animator.SetBool("isAttacking", true);
         }
