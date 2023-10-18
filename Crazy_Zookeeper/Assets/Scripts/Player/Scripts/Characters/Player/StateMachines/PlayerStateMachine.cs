@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerStateMachine : StateMachine
 {
     public Player Player { get; }
-    public Player_Stage2 Player_Stage2 { get; }
-    // States
     public PlayerIdleState IdleState { get; }
     public PlayerWalkState WalkState { get; }
     public PlayerRunState RunState { get; }
@@ -42,19 +40,5 @@ public class PlayerStateMachine : StateMachine
         MovementSpeed = player.Data.GroundedData.BaseSpeed;
         RotationDamping = player.Data.GroundedData.BaseRotationDamping;
     }
-    public PlayerStateMachine(Player_Stage2 player)
-    {
-        this.Player_Stage2 = player;
 
-        IdleState = new PlayerIdleState(this);
-        WalkState = new PlayerWalkState(this);
-        RunState = new PlayerRunState(this);
-        JumpState = new PlayerJumpState(this);
-        FallState = new PlayerFallState(this);
-
-        MainCameraTransform = Camera.main.transform;
-
-        MovementSpeed = player.Data.GroundedData.BaseSpeed;
-        RotationDamping = player.Data.GroundedData.BaseRotationDamping;
-    }
 }
