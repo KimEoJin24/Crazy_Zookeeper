@@ -2,12 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[CreateAssetMenu(fileName ="Item", menuName ="New Item")]
-public class ItemData_Stage2 : ScriptableObject
+public class ItemData_Stage2 : MonoBehaviour
 {
-    [Header("Info")]
-    public string displayName;
+    // Start is called before the first frame update
+    void Start()
+    {
+        
+    }
 
-    [Header("IsTaken")]
-    public bool isTaken;
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }
