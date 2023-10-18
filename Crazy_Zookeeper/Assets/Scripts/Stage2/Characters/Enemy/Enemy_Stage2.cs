@@ -4,15 +4,15 @@ using UnityEngine;
 
 public class Enemy_Stage2 : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    [field: Header("References")]
+    [field: SerializeField] public EnemySO Data { get; private set; }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [field: Header("Animations")]
+    [field: SerializeField] public PlayerAnimationData AnimationData { get; private set; }
+
+    public Rigidbody Rigidbody { get; private set; }
+    public Animator Animator { get; private set; }
+    public ForceReceiver ForceReceiver { get; private set; }
+    public CharacterController Controller { get; private set; }
+    private EnemyStateMachine_Stage2 stateMachine;
 }
