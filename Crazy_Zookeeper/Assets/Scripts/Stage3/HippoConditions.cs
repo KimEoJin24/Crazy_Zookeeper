@@ -13,7 +13,8 @@ public interface IDamagable
 [System.Serializable]
 public class Condition
 {
-    [HideInInspector][SerializeField]
+    [HideInInspector]
+    [SerializeField]
     public float curValue;
     public float maxValue;
     public float startValue;
@@ -43,23 +44,30 @@ public class HippoConditions : MonoBehaviour, IDamagable
     public Condition stamina;
 
     public UnityEvent onTakeDamage;
-    // Start is called before the first frame update
+
+
     void Start()
     {
         health.curValue = health.startValue;
         stamina.curValue = stamina.startValue;
     }
 
-    // Update is called once per frame
     void Update()
     {
+        stamina.Add(stamina.regenRate * Time.deltaTime);
+
         health.uiBar.fillAmount = health.GetPercentage();
         stamina.uiBar.fillAmount = stamina.GetPercentage();
     }
 
-    public void Heal(float amount)
+    public void HealthFilling(float amount)
     {
         health.Add(amount);
+    }
+
+    public void StaminaFilling(float amount)
+    {
+        stamina.Add(amount);
     }
 
     public bool UseStamina(float amount)
@@ -73,11 +81,13 @@ public class HippoConditions : MonoBehaviour, IDamagable
         return true;
     }
 
+    // TODO: 공격 기능에 따른 스태미나 감소 구현
     public void Die()
     {
         Debug.Log("하마가 쓰러졌다.");
     }
 
+    // TODO: 사육사 공격 종류에 따른 데미지 값 감소 구현
     public void TakePhysicalDamage(int damageAmount)
     {
         health.Subtract(damageAmount);
