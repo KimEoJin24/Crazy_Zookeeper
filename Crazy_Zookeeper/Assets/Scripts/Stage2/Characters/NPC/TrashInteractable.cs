@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AxeInteract : MonoBehaviour
+public class TrashInteractable : MonoBehaviour
 {
     public GameObject interactionUI;
     public GameObject player;
@@ -14,8 +14,6 @@ public class AxeInteract : MonoBehaviour
     public void Interact()
     {
         interactionUI.SetActive(true);
-        Destroy(gameObject);
-        GameManager_Stage2.instance.Axe.SetActive(true);
     }
     private void Update()
     {

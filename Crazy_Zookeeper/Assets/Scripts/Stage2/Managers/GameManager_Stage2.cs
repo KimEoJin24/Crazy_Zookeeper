@@ -7,6 +7,7 @@ public class GameManager_Stage2 : MonoBehaviour
 {
     public static GameManager_Stage2 instance;
     public GameObject Player;
+    public GameObject Axe;
     private void Awake()
     {
         instance = this;
@@ -14,7 +15,7 @@ public class GameManager_Stage2 : MonoBehaviour
 
     private void Start()
     {
-        
+        Axe.SetActive(false);
     }
     public void GameClear()
     {
