@@ -20,4 +20,9 @@ public class ChangeScene : MonoBehaviour
     {
         SceneManager.LoadScene("Stage3");
     }
+
+    public void GameExit()
+    {
+        Application.Quit();
+    }
 }
