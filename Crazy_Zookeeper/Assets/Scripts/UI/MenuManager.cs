@@ -10,7 +10,7 @@ public class MenuManager : MonoBehaviour
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Input.GetKeyDown(KeyCode.Escape) && menuUITF == false)
         {
             Time.timeScale = 0.0f;
             menuUI.SetActive(true);
