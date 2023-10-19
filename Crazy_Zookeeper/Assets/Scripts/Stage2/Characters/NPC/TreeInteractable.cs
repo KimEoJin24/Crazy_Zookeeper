@@ -8,23 +8,30 @@ public class TreeInteractable : MonoBehaviour
     public GameObject cutTree;
     public GameObject originalTree;
     public GameObject player;
+    public GameObject Axe;
     public float interactionDistance = 2f;
     private int capacity = 10;
     private bool isInteractable = true;
 
     public void Interact()
     {
-        if (isInteractable)
+        if (Axe.activeSelf)
         {
-            isInteractable = false;
-            player.GetComponent<Player>().InteractTree();
-            StartCoroutine(InvokeInteractionWithDelay());         
+            if(isInteractable)
+            {
+                isInteractable = false;
+                player.GetComponent<Player>().InteractTree();
+                StartCoroutine(InvokeInteractionWithDelay());
+                
+            }
+                     
         }
     }
     IEnumerator InvokeInteractionWithDelay()
     {
         Interacting();        
         yield return new WaitForSeconds(1f);
+        player.GetComponent<Player>().InteractTreeEnd();
         isInteractable = true;
     }
     public void TreeCut()

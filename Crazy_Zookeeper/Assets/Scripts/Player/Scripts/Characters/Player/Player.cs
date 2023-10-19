@@ -55,8 +55,11 @@ public class Player : MonoBehaviour
 
     public void InteractTree()
     {
-        Animator.SetBool("@Attack", true);
-        Debug.Log("!!");
+        Animator.SetBool("@Attack",true);
+    }
+    public void InteractTreeEnd()
+    {
+        Animator.SetBool("@Attack", false);
     }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
