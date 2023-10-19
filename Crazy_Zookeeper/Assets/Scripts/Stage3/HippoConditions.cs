@@ -46,7 +46,6 @@ public class HippoConditions : MonoBehaviour, IDamagable
 
     private static HippoConditions instance;
 
-    // 다른 스크립트에서 접근하기 위한 프로퍼티
     public static HippoConditions Instance
     {
         get
@@ -69,7 +68,6 @@ public class HippoConditions : MonoBehaviour, IDamagable
         health.curValue = health.startValue;
         onTakeDamage += UpdateUI;
     }
-
 
     public void HealthFilling(float amount)
     {
