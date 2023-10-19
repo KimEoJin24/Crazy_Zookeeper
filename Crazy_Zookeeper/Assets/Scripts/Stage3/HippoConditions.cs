@@ -45,7 +45,26 @@ public class HippoConditions : MonoBehaviour, IDamagable
 
     public UnityEvent onTakeDamage;
 
+    private static HippoConditions instance;
 
+    // 다른 스크립트에서 접근하기 위한 프로퍼티
+    public static HippoConditions Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<HippoConditions>();
+
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject("HippoConditions");
+                    instance = singletonObject.AddComponent<HippoConditions>();
+                }
+            }
+            return instance;
+        }
+    }
     void Start()
     {
         health.curValue = health.startValue;
@@ -93,4 +112,6 @@ public class HippoConditions : MonoBehaviour, IDamagable
         health.Subtract(damageAmount);
         onTakeDamage?.Invoke();
     }
+
+    // TODO: UpdateUI 메서드 
 }
