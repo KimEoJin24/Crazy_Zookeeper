@@ -41438,10 +41438,10 @@ CapsuleCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.05
-  m_Height: 0.7
+  m_Radius: 0.04
+  m_Height: 0.61
   m_Direction: 1
-  m_Center: {x: 0, y: 0.45, z: 0}
+  m_Center: {x: 0, y: 0.39, z: 0}
 --- !u!54 &1836715479
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -42107,8 +42107,8 @@ BoxCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 3
-  m_Size: {x: 0.26492488, y: 0.18, z: 0.16644353}
-  m_Center: {x: -0.0027580366, y: 0.26, z: -0.023197172}
+  m_Size: {x: 0.32, y: 0.2, z: 0.23}
+  m_Center: {x: -0.0027580366, y: 0.29, z: -0.023197172}
 --- !u!54 &1846429928
 Rigidbody:
   m_ObjectHideFlags: 0
