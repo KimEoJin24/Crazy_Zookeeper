@@ -182,7 +182,7 @@ Transform:
   m_Children:
   - {fileID: 2778265179239135235}
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1724161958687263608
 GameObject:
@@ -272,6 +272,7 @@ GameObject:
   m_Component:
   - component: {fileID: 526841036307756465}
   - component: {fileID: 3390321782123965031}
+  - component: {fileID: 345666715389877183}
   m_Layer: 0
   m_Name: ZookeeperConnditions
   m_TagString: Untagged
@@ -326,6 +327,32 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &345666715389877183
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1822260821861946855}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a786961864c7a134d8f0664ddcd74e6a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  conditions:
+    curValue: 0
+    maxValue: 0
+    startValue: 0
+    regenRate: 0
+    decayRate: 0
+    uiBar: {fileID: 6175762159962402565}
+  health:
+    curValue: 100
+    maxValue: 100
+    startValue: 100
+    regenRate: 0
+    decayRate: 0
+    uiBar: {fileID: 6175762159962402565}
 --- !u!1 &2205198687227848014
 GameObject:
   m_ObjectHideFlags: 0
@@ -490,6 +517,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5462857514770047752}
   - component: {fileID: 1520971203554966510}
+  - component: {fileID: 6718326292959671456}
   m_Layer: 0
   m_Name: HippoConditions
   m_TagString: Untagged
@@ -545,6 +573,32 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!114 &6718326292959671456
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4707344938786924048}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a0003c08345c7f34490cd56f92bebace, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health:
+    curValue: 100
+    maxValue: 100
+    startValue: 100
+    regenRate: 0
+    decayRate: 0
+    uiBar: {fileID: 8413924817042630319}
+  stamina:
+    curValue: 0
+    maxValue: 0
+    startValue: 0
+    regenRate: 0
+    decayRate: 0
+    uiBar: {fileID: 0}
 --- !u!1 &5078974372139631475
 GameObject:
   m_ObjectHideFlags: 0
