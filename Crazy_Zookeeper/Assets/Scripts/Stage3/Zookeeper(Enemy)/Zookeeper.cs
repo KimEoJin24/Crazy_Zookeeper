@@ -14,6 +14,7 @@ public class Zookeeper : MonoBehaviour
         if (HP <= 0)
         {
             animator.SetTrigger("Die");
+            GetComponent<Collider>().enabled = false;
             Debug.Log(HP + "Die");
         }
         else
@@ -21,5 +22,7 @@ public class Zookeeper : MonoBehaviour
             animator.SetTrigger("Damage");
             Debug.Log(HP + "Damage");
         }
+
     }
 }
+
