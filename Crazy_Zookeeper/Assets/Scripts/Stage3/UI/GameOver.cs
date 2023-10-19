@@ -10,6 +10,8 @@ public class GameOver : MonoBehaviour
         if (Input.anyKeyDown)
         {
             SceneManager.LoadScene("StartScene");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
