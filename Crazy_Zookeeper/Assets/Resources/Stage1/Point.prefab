@@ -120,5 +120,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 988d8b5c61081aa4c96a9a545d4ac8ca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  stageController: {fileID: 0}
   pointEffectprefab: {fileID: 1226392622918008927, guid: 3f9a4934a31a1724b848229015e47b9e,
     type: 3}

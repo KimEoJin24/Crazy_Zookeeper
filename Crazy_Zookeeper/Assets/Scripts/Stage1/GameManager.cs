@@ -10,7 +10,7 @@ public class GameManager : MonoBehaviour
     private string nextSceneName;
     [SerializeField]
     private GameObject panelStageClear;
-    private float GameTime = 7;
+    private float GameTime = 120;
     public Text GameTimeText;
 
     private void Awake()
