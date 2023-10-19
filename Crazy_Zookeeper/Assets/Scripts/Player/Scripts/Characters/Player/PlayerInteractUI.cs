@@ -1,15 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class PlayerInteractUI : MonoBehaviour
 {
     [SerializeField] private GameObject containerGameObject;
-    [SerializeField] private InterActionManager playerInteract;
+    [SerializeField] private PlayerInteract playerInteract;
+    [SerializeField] private TextMeshProUGUI interactTextMeshProUGUI;
 
     private void Update()
     {
-        if(playerInteract.GetInteractableObject() != null)
+        NPCInteractable interactableNPC = playerInteract.GetInteractableObject();
+        if (playerInteract.GetInteractableObject() != null)
         {
             Show();
         }
@@ -17,6 +20,7 @@ public class PlayerInteractUI : MonoBehaviour
         {
             Hide();
         }
+        
     }
 
     private void Show()
