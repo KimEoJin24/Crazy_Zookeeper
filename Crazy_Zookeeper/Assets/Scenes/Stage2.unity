@@ -470,6 +470,8 @@ MonoBehaviour:
   player: {fileID: 1803121535}
   Axe: {fileID: 1553945008}
   interactionDistance: 2
+  audioSource: {fileID: 0}
+  soundClip: {fileID: 8300000, guid: a24ed534fa1757148be629353feefd3e, type: 3}
 --- !u!1 &79364844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1291244125551942, guid: 99a8c38a09f90224f8ccea4c2b9ead27,
@@ -10616,7 +10618,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh301068
+  m_Name: pb_Mesh406816
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
