@@ -93,20 +93,17 @@ public class HippoConditions : MonoBehaviour, IDamagable
         return true;
     }
 
-    // TODO: 공격 기능에 따른 스태미나 감소 구현
     public void Die()
     {
         Debug.Log("하마가 쓰러졌다.");
     }
 
-    // TODO: 사육사 공격 종류에 따른 데미지 값 감소 구현
     public void TakePhysicalDamage(int damageAmount)
     {
         health.Subtract(damageAmount);
         onTakeDamage?.Invoke();
     }
 
-    // TODO: UpdateUI 메서드 
     void UpdateUI()
     {
         health.uiBar.fillAmount = health.GetPercentage();
