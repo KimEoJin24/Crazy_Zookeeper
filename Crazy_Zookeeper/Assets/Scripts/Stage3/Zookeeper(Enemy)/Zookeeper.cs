@@ -10,7 +10,8 @@ public class Zookeeper : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         HP -= damageAmount;
-        if(HP <= 0)
+        ZookeeperConditions.Instance.TakePhysicalDamage(damageAmount);
+        if (HP <= 0)
         {
             animator.SetTrigger("Die");
             Debug.Log(HP + "Die");
