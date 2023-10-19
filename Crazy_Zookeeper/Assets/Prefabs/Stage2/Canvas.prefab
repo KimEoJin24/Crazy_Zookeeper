@@ -1009,7 +1009,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 9212184334794455047}
+  m_Father: {fileID: 7006876967389301353}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
@@ -1581,14 +1581,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9212184334794455047}
-  - component: {fileID: 1753055647998665727}
   m_Layer: 5
   m_Name: WeaponPopupUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &9212184334794455047
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1602,7 +1601,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 6736867748728400265}
-  - {fileID: 2009575472331047202}
   - {fileID: 5903737137731778248}
   - {fileID: 7006876967389301353}
   m_Father: {fileID: 8511285342278754482}
@@ -1613,21 +1611,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1753055647998665727
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5170124586287106290}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 014ae59ab8de0994c8c2e0b3c6401c74, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  containerGameObject: {fileID: 4287420957132486268}
-  playerInteract: {fileID: 0}
-  interactTextMeshProUGUI: {fileID: 0}
 --- !u!1 &5413527042259662920
 GameObject:
   m_ObjectHideFlags: 0
@@ -1664,7 +1647,7 @@ RectTransform:
   - {fileID: 6867002995574877510}
   - {fileID: 4872588460712774637}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2087,13 +2070,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 2009575472331047202}
   - {fileID: 5759119689495494102}
   m_Father: {fileID: 9212184334794455047}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -191}
   m_SizeDelta: {x: 1820, y: 980}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &3296495012330908455
