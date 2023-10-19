@@ -37,6 +37,20 @@ public class GameManager_Stage2 : MonoBehaviour
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
     }
+    public void ResumeGame()
+    {
+        menuUI.SetActive(false);
+        Time.timeScale = 1f;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
+    }
+    public void ExitGame()
+    {
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("StartScene");
+    }
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
