@@ -419,6 +419,7 @@ GameObject:
   m_Component:
   - component: {fileID: 73050263}
   - component: {fileID: 73050264}
+  - component: {fileID: 73050265}
   m_Layer: 10
   m_Name: PotionTree
   m_TagString: Untagged
@@ -464,6 +465,22 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 5, z: 1}
   m_Center: {x: 0, y: 2, z: 0}
+--- !u!114 &73050265
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 73050262}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9eae5480543474c4b80f1b742b647094, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cutTree: {fileID: 797325411}
+  originalTree: {fileID: 276898822}
+  player: {fileID: 1803121535}
+  interactionDistance: 2
 --- !u!1 &79364844 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1291244125551942, guid: 99a8c38a09f90224f8ccea4c2b9ead27,
@@ -1315,6 +1332,11 @@ PrefabInstance:
       propertyPath: enemyLayer.m_Bits
       value: 2048
       objectReference: {fileID: 0}
+    - target: {fileID: 7346484166965860812, guid: 7b17fd14ab92c294aa849e08a28cf21d,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 48a00510447abc84ab9b468ebd481d5e, type: 2}
     - target: {fileID: 7493516850073047823, guid: 7b17fd14ab92c294aa849e08a28cf21d,
         type: 3}
       propertyPath: m_Radius
@@ -1461,6 +1483,12 @@ PrefabInstance:
 --- !u!4 &276898821 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 05781e34d19387b4bb9c0e1c42f03352,
+    type: 3}
+  m_PrefabInstance: {fileID: 276898820}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &276898822 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 05781e34d19387b4bb9c0e1c42f03352,
     type: 3}
   m_PrefabInstance: {fileID: 276898820}
   m_PrefabAsset: {fileID: 0}
@@ -3858,6 +3886,12 @@ PrefabInstance:
 --- !u!4 &797325410 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 71e7cb600453b0a4791c471c86dcb60a,
+    type: 3}
+  m_PrefabInstance: {fileID: 797325409}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &797325411 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 71e7cb600453b0a4791c471c86dcb60a,
     type: 3}
   m_PrefabInstance: {fileID: 797325409}
   m_PrefabAsset: {fileID: 0}
@@ -8514,7 +8548,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-358090
+  m_Name: pb_Mesh56506
   serializedVersion: 11
   m_SubMeshes:
   - serializedVersion: 2
