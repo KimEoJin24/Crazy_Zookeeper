@@ -28,7 +28,7 @@ public class GameManager_Stage2 : MonoBehaviour
     {
         Time.timeScale = 0;
         //UIÆ²±â
-        SceneManager.LoadScene("Stage3");
+        SceneManager.LoadScene("BossIntroScene");
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
     }
