@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b27dcddd2813aa47b51b611b23889c3, type: 3}
   m_Name: ZookeeperSO
   m_EditorClassIdentifier: 
-  <PlayerChasingRange>k__BackingField: 10
-  <AttackRange>k__BackingField: 1.5
+  <PlayerChasingRange>k__BackingField: 7
+  <AttackRange>k__BackingField: 2.7
   <ForceTransitionTime>k__BackingField: 0
   <Force>k__BackingField: 0
   <Damage>k__BackingField: 0
   <Dealing_Start_TransitionTime>k__BackingField: 0
   <Dealing_End_TransitionTime>k__BackingField: 0
   <GroundedData>k__BackingField:
-    <BaseSpeed>k__BackingField: 5
+    <BaseSpeed>k__BackingField: 3
     <BaseRotationDamping>k__BackingField: 1
     <WalkSpeedModifier>k__BackingField: 0.225
     <RunSpeedModifier>k__BackingField: 1

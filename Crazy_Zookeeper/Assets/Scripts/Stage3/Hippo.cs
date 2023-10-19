@@ -22,4 +22,9 @@ public class Hippo : MonoBehaviour
             Debug.Log(HP + "Hippo Damage");
         }
     }
+
+    public void PickItem(int hp)
+    {
+        
+    }
 }
