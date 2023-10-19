@@ -39,7 +39,7 @@ public class StageController : MonoBehaviour
         if ( currentPointCount == 0)
         {
             getAllPoints = true;
-            Time.timeScale = 0.0f;
+            Time.timeScale = 1.0f;
             panelStageClear.SetActive(true);
         }
     }
