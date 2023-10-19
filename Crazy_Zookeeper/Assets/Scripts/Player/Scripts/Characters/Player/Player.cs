@@ -53,7 +53,11 @@ public class Player : MonoBehaviour
         stateMachine.PhysicsUpdate();
     }
 
-
+    public void InteractTree()
+    {
+        Animator.SetBool("@Attack", true);
+        Debug.Log("!!");
+    }
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {

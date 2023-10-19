@@ -7,15 +7,24 @@ public class AxeInteract : MonoBehaviour
     public GameObject interactionUI;
     public GameObject player;
     public float interactionDistance = 2f;
+    public float displayDuration = 2f;
+    public bool isInteracting = false;
     void Start()
     {
         interactionUI.SetActive(false);
     }
     public void Interact()
     {
-        interactionUI.SetActive(true);
-        Destroy(gameObject);
+        StartCoroutine(InvokeInteractionWithDelay());
+        
+    }
+    IEnumerator InvokeInteractionWithDelay()
+    {
+        InteractAction();
+        yield return new WaitForSeconds(1f);
         GameManager_Stage2.instance.Axe.SetActive(true);
+        interactionUI.SetActive(false);
+        Destroy(gameObject);
     }
     private void Update()
     {
@@ -33,5 +42,11 @@ public class AxeInteract : MonoBehaviour
                 interactionUI.SetActive(false);
             }
         }
+    }
+    public void InteractAction()
+    {
+        interactionUI.SetActive(true);
+        isInteracting = true;
+        
     }
 }

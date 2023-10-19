@@ -8,6 +8,8 @@ public class GameManager_Stage2 : MonoBehaviour
     public static GameManager_Stage2 instance;
     public GameObject Player;
     public GameObject Axe;
+
+
     private void Awake()
     {
         instance = this;
@@ -28,4 +30,5 @@ public class GameManager_Stage2 : MonoBehaviour
         Time.timeScale = 0;
         SceneManager.LoadScene("StartScene");
     }
+    
 }
