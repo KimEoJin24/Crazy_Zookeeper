@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,8 +14,6 @@ public interface IDamagable
 [System.Serializable]
 public class Condition
 {
-    [HideInInspector]
-    [SerializeField]
     public float curValue;
     public float maxValue;
     public float startValue;
@@ -43,7 +42,7 @@ public class HippoConditions : MonoBehaviour, IDamagable
     public Condition health;
     public Condition stamina;
 
-    public UnityEvent onTakeDamage;
+    public Action onTakeDamage;
 
     private static HippoConditions instance;
 
@@ -68,20 +67,14 @@ public class HippoConditions : MonoBehaviour, IDamagable
     void Start()
     {
         health.curValue = health.startValue;
-        stamina.curValue = stamina.startValue;
+        onTakeDamage += UpdateUI;
     }
 
-    void Update()
-    {
-        stamina.Add(stamina.regenRate * Time.deltaTime);
-
-        health.uiBar.fillAmount = health.GetPercentage();
-        stamina.uiBar.fillAmount = stamina.GetPercentage();
-    }
 
     public void HealthFilling(float amount)
     {
         health.Add(amount);
+        onTakeDamage?.Invoke();
     }
 
     public void StaminaFilling(float amount)
@@ -114,4 +107,8 @@ public class HippoConditions : MonoBehaviour, IDamagable
     }
 
     // TODO: UpdateUI ¸Þ¼­µå 
+    void UpdateUI()
+    {
+        health.uiBar.fillAmount = health.GetPercentage();
+    }
 }
