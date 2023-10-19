@@ -6,6 +6,7 @@ public class Hippo : MonoBehaviour
 {
     public int HP = 100;
     public Animator animator;
+    public GameObject gameOverUI;
 
     public void TakeDamage(int damageAmount)
     {
@@ -16,6 +17,7 @@ public class Hippo : MonoBehaviour
             animator.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
             Debug.Log(HP + "Hippo Die");
+            gameOverUI.gameObject.SetActive(true);
         }
         else
         {
