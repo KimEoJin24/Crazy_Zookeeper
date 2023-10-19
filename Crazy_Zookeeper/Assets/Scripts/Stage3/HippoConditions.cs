@@ -46,7 +46,6 @@ public class HippoConditions : MonoBehaviour, IDamagable
 
     private static HippoConditions instance;
 
-    // 다른 스크립트에서 접근하기 위한 프로퍼티
     public static HippoConditions Instance
     {
         get
@@ -70,7 +69,6 @@ public class HippoConditions : MonoBehaviour, IDamagable
         onTakeDamage += UpdateUI;
     }
 
-
     public void HealthFilling(float amount)
     {
         health.Add(amount);
@@ -93,20 +91,17 @@ public class HippoConditions : MonoBehaviour, IDamagable
         return true;
     }
 
-    // TODO: 공격 기능에 따른 스태미나 감소 구현
     public void Die()
     {
         Debug.Log("하마가 쓰러졌다.");
     }
 
-    // TODO: 사육사 공격 종류에 따른 데미지 값 감소 구현
     public void TakePhysicalDamage(int damageAmount)
     {
         health.Subtract(damageAmount);
         onTakeDamage?.Invoke();
     }
 
-    // TODO: UpdateUI 메서드 
     void UpdateUI()
     {
         health.uiBar.fillAmount = health.GetPercentage();

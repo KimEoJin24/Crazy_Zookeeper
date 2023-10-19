@@ -20,9 +20,11 @@ TagManager:
   - Player
   - NPC
   - Interactable
+  - gameover
   - Equip
   - Resource
   - Enemy_Stage2
+  - 
   - 
   - 
   - 

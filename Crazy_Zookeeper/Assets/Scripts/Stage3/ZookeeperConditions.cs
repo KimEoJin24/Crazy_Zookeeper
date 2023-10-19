@@ -13,7 +13,6 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
 
     private static ZookeeperConditions instance;
 
-    // 다른 스크립트에서 접근하기 위한 프로퍼티
     public static ZookeeperConditions Instance
     {
         get
@@ -32,19 +31,10 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
         }
     }
 
-
-    // Start is called before the first frame update
     void Start()
     {
         health.curValue = health.startValue;
         onTakeDamage += UpdateUI;
-    }
-
-
-    // TODO: 사육사 스킬 중 체력 회복 스킬 없을 경우 삭제 예정
-    public void Heal(float amount)
-    {
-        health.Add(amount);
     }
 
     public void Die()
@@ -52,14 +42,13 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
         Debug.Log("사육사가 쓰러졌다.");
     }
 
-    // TODO: 하마 공격 종류에 따른 데미지 값 감소 구현
+
     public void TakePhysicalDamage(int damageAmount)
     {
         health.Subtract(damageAmount);
         onTakeDamage?.Invoke();
     }
 
-    // TODO: UpdateUI 메서드
     void UpdateUI()
     {
         health.uiBar.fillAmount = health.GetPercentage();
