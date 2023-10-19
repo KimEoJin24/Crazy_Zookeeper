@@ -22,9 +22,7 @@ public class TreeInteractable : MonoBehaviour
                 isInteractable = false;
                 player.GetComponent<Player>().InteractTree();
                 StartCoroutine(InvokeInteractionWithDelay());
-                
-            }
-                     
+            }       
         }
     }
     IEnumerator InvokeInteractionWithDelay()
