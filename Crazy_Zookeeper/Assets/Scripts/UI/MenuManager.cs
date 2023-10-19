@@ -6,27 +6,25 @@ using UnityEngine.SceneManagement;
 public class MenuManager : MonoBehaviour
 {
     public GameObject menuUI;
-    public static bool menuUITF = false;
 
     public void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Tab) && menuUITF == false)
+        if (Input.GetButtonDown("Cancel"))
         {
-            menuUI.SetActive(true);
+            if(menuUI.activeSelf)
+            {
+                menuUI.SetActive(false);
+            }
+            else
+            {
+                menuUI.SetActive(true);
+            }
         }
     }
-    
-    public void PlayButton()
-    {
-        menuUI.SetActive(false);
-        menuUITF = false;   
-    }
-
     public void ExitButton()
     {
         SceneManager.LoadScene("StartScene");
-        menuUI.SetActive(false);   
-        menuUITF = false;   
+
     }
 
 }
