@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-
 public interface IInteractable
 {
     string GetInteractPrompt();
     void OnInteract();
 }
+
 public class PlayerInteract : MonoBehaviour
 {
-    private float interactRange = 2f;
+    private float interactRange = 3f;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -35,6 +35,7 @@ public class PlayerInteract : MonoBehaviour
             {
                 return npcInteractable;
             }
+
         }
         return null;
     }

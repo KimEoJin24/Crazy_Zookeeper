@@ -6,6 +6,7 @@ public class Zookeeper : MonoBehaviour
 {
     public int HP = 100;
     public Animator animator;
+    public GameObject gameSuccess;
 
     public void TakeDamage(int damageAmount)
     {
@@ -16,6 +17,7 @@ public class Zookeeper : MonoBehaviour
             animator.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
             Debug.Log(HP + "Die");
+            gameSuccess.gameObject.SetActive(true);
         }
         else
         {

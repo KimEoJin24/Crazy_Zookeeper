@@ -11,7 +11,9 @@ public class PlayerInteractUI : MonoBehaviour
 
     private void Update()
     {
+        
         NPCInteractable interactableNPC = playerInteract.GetInteractableObject();
+        
         if (playerInteract.GetInteractableObject() != null)
         {
             Show();
@@ -20,6 +22,7 @@ public class PlayerInteractUI : MonoBehaviour
         {
             Hide();
         }
+        
         
     }
 

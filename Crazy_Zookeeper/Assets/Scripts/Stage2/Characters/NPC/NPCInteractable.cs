@@ -5,7 +5,8 @@ using UnityEngine;
 public class NPCInteractable : MonoBehaviour
 {
     public GameObject interactionUI;
-    public float interactionDistance = 3f;
+    public GameObject player;
+    public float interactionDistance = 2f;
     void Start()
     {
         interactionUI.SetActive(false);
@@ -22,14 +23,13 @@ public class NPCInteractable : MonoBehaviour
         }
         if (interactionUI.activeSelf)
         {
-            // 플레이어와의 거리를 계산
-           // float distanceToPlayer = Vector3.Distance(transform.position, PlayerController.instance.transform.position);
+            float distanceToPlayer = Vector3.Distance(transform.position, player.transform.position);
 
-            // 일정 거리 이상 멀어졌을 때 UI를 비활성화
-            //if (distanceToPlayer > interactionDistance)
-            //{
-            //    interactionUI.SetActive(false);
-            //}
+            
+            if (distanceToPlayer > interactionDistance)
+            {
+                interactionUI.SetActive(false);
+            }
         }
     }
 }
