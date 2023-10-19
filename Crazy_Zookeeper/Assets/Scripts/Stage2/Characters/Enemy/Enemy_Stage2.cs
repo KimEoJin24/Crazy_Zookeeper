@@ -15,11 +15,14 @@ public class Enemy_Stage2 : MonoBehaviour
 
     private void Update()
     {
-        if(transform.position != points[current].position)
+        if (transform.position != points[current].position)
         {
-            transform.position = Vector3.MoveTowards(transform.position, points[current].position, speed*Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, points[current].position, speed * Time.deltaTime);
         }
         else
-            current = (current+1)%points.Length;
+        {
+            current = (current + 1) % points.Length;
+            transform.LookAt(points[current].position);
+        }
     }
 }
