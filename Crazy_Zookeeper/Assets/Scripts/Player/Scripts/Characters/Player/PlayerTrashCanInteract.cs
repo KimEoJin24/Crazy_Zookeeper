@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-public interface IInteractable
+
+public interface IInteractableTrashCan
 {
     string GetInteractPrompt();
     void OnInteract();
 }
-
-public class PlayerInteract : MonoBehaviour
+public class PlayerTrashCanInteract : MonoBehaviour
 {
-    private float interactRange = 3f;
+    private float interactRange = 2f;
     private void Update()
     {
         if (Input.GetKeyDown(KeyCode.Q))
@@ -19,21 +19,22 @@ public class PlayerInteract : MonoBehaviour
             Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
             foreach(Collider collider in colliderArray)
             {
-                if(collider.TryGetComponent(out NPCInteractable npcInteractable))
+                if (collider.TryGetComponent(out TrashInteractable trashCanInteractable))
                 {
-                    npcInteractable.Interact();
+                    trashCanInteractable.Interact();
                 }
             }
         }
     }
-    public NPCInteractable GetInteractableObject()
+
+    public TrashInteractable GetInteractableObjectTrashCan()
     {
         Collider[] colliderArray = Physics.OverlapSphere(transform.position, interactRange);
-        foreach(Collider collider in colliderArray)
+        foreach (Collider collider in colliderArray)
         {
-            if(collider.TryGetComponent(out NPCInteractable npcInteractable))
+            if (collider.TryGetComponent(out TrashInteractable trashCanInteractable))
             {
-                return npcInteractable;
+                return trashCanInteractable;
             }
 
         }

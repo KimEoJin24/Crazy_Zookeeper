@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPCInteractable : MonoBehaviour
+public class TrashInteractable : MonoBehaviour
 {
     public GameObject interactionUI;
     public GameObject player;

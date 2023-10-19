@@ -3,27 +3,24 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerInteractUI : MonoBehaviour
+public class TreeUI : MonoBehaviour
 {
     [SerializeField] private GameObject containerGameObject;
-    [SerializeField] private PlayerInteract playerInteract;
+    [SerializeField] private PlayerTreeInteract playerInteract;
     [SerializeField] private TextMeshProUGUI interactTextMeshProUGUI;
 
     private void Update()
     {
+        TreeInteractable interactableAxe = playerInteract.GetInteractableObjectTree();
         
-        NPCInteractable interactableNPC = playerInteract.GetInteractableObject();
-        
-        if (playerInteract.GetInteractableObject() != null)
+        if (playerInteract.GetInteractableObjectTree() != null)
         {
             Show();
         }
         else
         {
             Hide();
-        }
-        
-        
+        }      
     }
 
     private void Show()

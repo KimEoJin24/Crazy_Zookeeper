@@ -3,27 +3,24 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class PlayerInteractUI : MonoBehaviour
+public class TrashCanUI : MonoBehaviour
 {
     [SerializeField] private GameObject containerGameObject;
-    [SerializeField] private PlayerInteract playerInteract;
+    [SerializeField] private PlayerTrashCanInteract playerInteract;
     [SerializeField] private TextMeshProUGUI interactTextMeshProUGUI;
 
     private void Update()
     {
+        TrashInteractable interactableAxe = playerInteract.GetInteractableObjectTrashCan();
         
-        NPCInteractable interactableNPC = playerInteract.GetInteractableObject();
-        
-        if (playerInteract.GetInteractableObject() != null)
+        if (playerInteract.GetInteractableObjectTrashCan() != null)
         {
             Show();
         }
         else
         {
             Hide();
-        }
-        
-        
+        }      
     }
 
     private void Show()

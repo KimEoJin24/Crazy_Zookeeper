@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2762048916750938896}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: CameraContainer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,11 +43,10 @@ GameObject:
   - component: {fileID: 3504386283761198453}
   - component: {fileID: 7493516850073047823}
   - component: {fileID: 2735750238469030945}
-  - component: {fileID: 1121490394033143565}
   - component: {fileID: 3903319651742377027}
   - component: {fileID: 7409146084025813789}
   - component: {fileID: 52370750215617909}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Player2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -111,19 +110,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   controller: {fileID: 7493516850073047823}
   drag: 0.3
---- !u!114 &1121490394033143565
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3652380209402190289}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 232d77a333b51ac4f88b72dd7aef7364, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
 --- !u!114 &3903319651742377027
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,12 +158,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8d8751dd6952ff041834555ba0411a3b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  checkRate: 0.05
-  maxCheckDistance: 3
-  layerMask:
-    serializedVersion: 2
-    m_Bits: 384
-  promptText: {fileID: 0}
 --- !u!1 &3789850498480543746
 GameObject:
   m_ObjectHideFlags: 0
@@ -190,7 +170,7 @@ GameObject:
   - component: {fileID: 7249190739683661828}
   - component: {fileID: 3934334557304874404}
   - component: {fileID: 962526510568074858}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -324,7 +304,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253282941956356876}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: breast.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -355,7 +335,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253177373609756728}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: breast.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -387,7 +367,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257143009853132218}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: breast.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -418,7 +398,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253219761678626704}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: forearm.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -450,7 +430,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253541582502433176}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pelvis.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -481,7 +461,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253249140623978646}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pelvis.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -513,7 +493,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7257019000778950518}
   - component: {fileID: 7346484166965860812}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HippoTeddy EHL
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -567,7 +547,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253300967340184526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: thigh.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -599,7 +579,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257178920069986678}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pelvis.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -631,7 +611,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257087221119578402}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shin.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -662,7 +642,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253407999031459418}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shin.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -694,7 +674,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253349794811451178}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine.004
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -726,7 +706,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253563795339454228}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: pelvis.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -758,7 +738,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257444743233415996}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine.003
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -794,7 +774,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257175628459330928}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine.002
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -826,7 +806,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253169720016367968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine.006
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -858,7 +838,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257035382190838522}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine.005
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -890,7 +870,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253243768763921524}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: forearm.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -922,7 +902,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257028237277820270}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -958,7 +938,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253257090117884526}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -989,7 +969,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253564324762918128}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: breast.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1021,7 +1001,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253508755606248968}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: thigh.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1053,7 +1033,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257473995046308818}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1085,7 +1065,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253561450527439766}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shin.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1116,7 +1096,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257087530511211860}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: HippoTeddybones
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1148,7 +1128,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257178406495493408}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine.006_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1179,7 +1159,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253518569263778106}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.L_end
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1210,7 +1190,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257354467517949018}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: spine.001
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1242,7 +1222,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7253179763617272778}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hand.R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1274,7 +1254,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7257325839421758396}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: shin.L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1307,7 +1287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7257308377050209572}
   - component: {fileID: 7300211407176481924}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: hippoTeddyMesh
   m_TagString: Untagged
   m_Icon: {fileID: 0}
