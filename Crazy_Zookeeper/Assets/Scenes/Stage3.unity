@@ -18124,7 +18124,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 793737166}
   m_LocalRotation: {x: 0.21913654, y: -0.000000029802322, z: -0, w: 0.9756943}
-  m_LocalPosition: {x: 0, y: 3, z: -2.04}
+  m_LocalPosition: {x: -0, y: 3.04, z: -2.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -21134,9 +21134,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cameraContainer: {fileID: 2040359565}
-  minXLook: -85
-  maxXLook: 85
-  lookSensitivity: 2
+  minXLook: -60
+  maxXLook: 60
+  lookSensitivity: 5
   canLook: 1
 --- !u!1001 &964951516
 PrefabInstance:
