@@ -29,8 +29,6 @@ public class GameManager_Stage2 : MonoBehaviour
         Time.timeScale = 0;
         //UIÆ²±â
         SceneManager.LoadScene("BossIntroScene");
-        UnityEngine.Cursor.lockState = CursorLockMode.None;
-        UnityEngine.Cursor.visible = true;
     }
     public void GameOver()
     {
@@ -38,6 +36,20 @@ public class GameManager_Stage2 : MonoBehaviour
         SceneManager.LoadScene("StartScene");
         UnityEngine.Cursor.lockState = CursorLockMode.None;
         UnityEngine.Cursor.visible = true;
+    }
+    public void ResumeGame()
+    {
+        menuUI.SetActive(false);
+        Time.timeScale = 1f;
+        UnityEngine.Cursor.lockState = CursorLockMode.Locked;
+        UnityEngine.Cursor.visible = false;
+    }
+    public void ExitGame()
+    {
+        UnityEngine.Cursor.lockState = CursorLockMode.None;
+        UnityEngine.Cursor.visible = true;
+        Time.timeScale = 0f;
+        SceneManager.LoadScene("StartScene");
     }
     private void Update()
     {
