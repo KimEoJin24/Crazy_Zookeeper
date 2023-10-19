@@ -12,6 +12,17 @@ public class TreeInteractable : MonoBehaviour
     public float interactionDistance = 2f;
     private int capacity = 10;
     private bool isInteractable = true;
+    //public AudioSource audioSource;
+    //public AudioClip soundClip;
+
+    //void Start()
+    //{
+    //    // AudioSource 컴포넌트를 참조
+    //    audioSource = GetComponent<AudioSource>();
+
+    //    // 소리 파일을 로드
+    //    soundClip = Resources.Load<AudioClip>("hit3"); // Resources 폴더 내에 소리 파일을 넣어야 합니다.
+    //}
 
     public void Interact()
     {
@@ -21,6 +32,7 @@ public class TreeInteractable : MonoBehaviour
             {
                 isInteractable = false;
                 player.GetComponent<Player>().InteractTree();
+                //audioSource.PlayOneShot(soundClip);
                 StartCoroutine(InvokeInteractionWithDelay());
             }       
         }
