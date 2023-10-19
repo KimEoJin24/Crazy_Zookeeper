@@ -19,6 +19,8 @@ public class Player : MonoBehaviour
 
     private PlayerStateMachine stateMachine;
 
+    public LayerMask enemyLayer;
+
 
     private void Awake()
     {
@@ -37,6 +39,7 @@ public class Player : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         stateMachine.ChangeState(stateMachine.IdleState);
+        Controller = GetComponent<CharacterController>();
     }
 
     private void Update()
@@ -48,5 +51,16 @@ public class Player : MonoBehaviour
     private void FixedUpdate()
     {
         stateMachine.PhysicsUpdate();
+    }
+
+
+
+    void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        // 충돌한 오브젝트가 적 레이어에 속하는지 확인
+        if (enemyLayer == (enemyLayer | (1 << hit.gameObject.layer)))
+        {
+            GameManager_Stage2.instance.GameOver();
+        }
     }
 }
