@@ -4,15 +4,22 @@ using UnityEngine;
 
 public class Enemy_Stage2 : MonoBehaviour
 {
-    [field: Header("References")]
-    [field: SerializeField] public EnemySO Data { get; private set; }
+    public Transform[] points;
+    int current;
+    public float speed;
 
-    [field: Header("Animations")]
-    [field: SerializeField] public PlayerAnimationData AnimationData { get; private set; }
+    private void Start()
+    {
+        current = 0;
+    }
 
-    public Rigidbody Rigidbody { get; private set; }
-    public Animator Animator { get; private set; }
-    public ForceReceiver ForceReceiver { get; private set; }
-    public CharacterController Controller { get; private set; }
-    private EnemyStateMachine_Stage2 stateMachine;
+    private void Update()
+    {
+        if(transform.position != points[current].position)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, points[current].position, speed*Time.deltaTime);
+        }
+        else
+            current = (current+1)%points.Length;
+    }
 }

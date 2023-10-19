@@ -10,6 +10,7 @@ public class Hippo : MonoBehaviour
     public void TakeDamage(int damageAmount)
     {
         HP -= damageAmount;
+        HippoConditions.Instance.TakePhysicalDamage(damageAmount);
         if (HP <= 0)
         {
             animator.SetTrigger("Die");
