@@ -10,6 +10,28 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
     public Condition health;
     public UnityEvent onTakeDamage;
 
+    private static ZookeeperConditions instance;
+
+    // 다른 스크립트에서 접근하기 위한 프로퍼티
+    public static ZookeeperConditions Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = FindObjectOfType<ZookeeperConditions>();
+
+                if (instance == null)
+                {
+                    GameObject singletonObject = new GameObject("ZookeeperConditions");
+                    instance = singletonObject.AddComponent<ZookeeperConditions>();
+                }
+            }
+            return instance;
+        }
+    }
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -39,4 +61,6 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
         health.Subtract(damageAmount);
         onTakeDamage?.Invoke();
     }
+
+    // TODO: UpdateUI 메서드
 }
