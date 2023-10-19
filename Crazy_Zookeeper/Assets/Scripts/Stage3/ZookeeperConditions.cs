@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,7 +9,7 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
 {
     public Condition conditions;
     public Condition health;
-    public UnityEvent onTakeDamage;
+    public Action onTakeDamage;
 
     private static ZookeeperConditions instance;
 
@@ -36,13 +37,9 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
     void Start()
     {
         health.curValue = health.startValue;
+        onTakeDamage += UpdateUI;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        health.uiBar.fillAmount = health.GetPercentage();
-    }
 
     // TODO: 사육사 스킬 중 체력 회복 스킬 없을 경우 삭제 예정
     public void Heal(float amount)
@@ -63,4 +60,8 @@ public class ZookeeperConditions : MonoBehaviour, IDamagable
     }
 
     // TODO: UpdateUI 메서드
+    void UpdateUI()
+    {
+        health.uiBar.fillAmount = health.GetPercentage();
+    }
 }
