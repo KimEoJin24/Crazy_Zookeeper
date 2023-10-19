@@ -9,6 +9,7 @@ TagManager:
   - Green
   - Red
   - Blue
+  - Enemy_Stage2
   layers:
   - Default
   - TransparentFX
@@ -19,9 +20,9 @@ TagManager:
   - Player
   - NPC
   - Interactable
-  - 
-  - 
-  - 
+  - Equip
+  - Resource
+  - Enemy_Stage2
   - 
   - 
   - 

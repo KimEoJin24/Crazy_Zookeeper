@@ -57,7 +57,6 @@ public class Player : MonoBehaviour
 
     void OnControllerColliderHit(ControllerColliderHit hit)
     {
-        // 충돌한 오브젝트가 적 레이어에 속하는지 확인
         if (enemyLayer == (enemyLayer | (1 << hit.gameObject.layer)))
         {
             GameManager_Stage2.instance.GameOver();
