@@ -59,5 +59,9 @@
 <br>
 
 ## 게임 소개 영상
-https://github.com/coco0715/ReadMe_Study/assets/101281567/8284f473-d0b2-4bed-86aa-6869caa8f220
-<br>
+
+
+
+https://github.com/KimEoJin24/Crazy_Zookeeper/assets/101281567/1e1e5cb6-aad1-45d4-abef-3324bf7c8ba3
+
+
