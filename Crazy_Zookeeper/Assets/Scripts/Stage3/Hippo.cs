@@ -7,6 +7,7 @@ public class Hippo : MonoBehaviour
     public int HP = 100;
     public Animator animator;
     public GameObject gameOverUI;
+    public AudioSource takeDamageSound;
 
     public void TakeDamage(int damageAmount)
     {
@@ -21,8 +22,10 @@ public class Hippo : MonoBehaviour
         }
         else
         {
+            takeDamageSound.Play();
             animator.SetTrigger("Damage");
             Debug.Log(HP + "Hippo Damage");
+        
         }
     }
 

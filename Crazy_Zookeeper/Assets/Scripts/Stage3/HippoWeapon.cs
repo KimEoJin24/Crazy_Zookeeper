@@ -5,6 +5,7 @@ using UnityEngine;
 public class HippoWeapon : MonoBehaviour
 {
     public int damageAmont = 20;
+    public AudioSource attackSound;
 
     void Start()
     {
@@ -15,6 +16,7 @@ public class HippoWeapon : MonoBehaviour
     {
         if(other.tag == "Zookeeper")
         {
+            attackSound.Play();
             other.GetComponent<Zookeeper>().TakeDamage(damageAmont);
         }
     }
