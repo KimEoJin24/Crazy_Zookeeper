@@ -10,6 +10,8 @@ public class GameSuccess : MonoBehaviour
         if (Input.anyKeyDown)
         {
             SceneManager.LoadScene("EndScene");
+            Cursor.lockState = CursorLockMode.None;
+            Cursor.visible = true;
         }
     }
 }
