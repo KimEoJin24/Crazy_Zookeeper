@@ -5,4 +5,5 @@
 
 
 
-![image](https://github.com/KimEoJin24/Crazy_Zookeeper/assets/101281567/13ac345a-9fda-49ae-b12a-1bdd9caa3e83)
+![image](https://github.com/KimEoJin24/Crazy_Zookeeper/assets/101281567/8855a5a2-01f5-4112-91c5-774a264ffcb1)
+
